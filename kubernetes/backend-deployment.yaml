@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "backend"
+        track: "stable"
+    spec:
+      containers:
+        - name: "backend"
+          image: "kelseyhightower/backend:1.0.0"
